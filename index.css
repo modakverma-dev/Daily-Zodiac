@@ -118,6 +118,13 @@ body {
   color: transparent;
 }
 
+.author h2 {
+  color: white;
+}
+.author p {
+  color: rgba(255, 255, 255, 0123.545);
+}
+
 .banner .content .model {
   background-image: url(images/sadhu.png);
   background-repeat: no-repeat;
