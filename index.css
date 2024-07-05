@@ -22,7 +22,7 @@ body {
 
 .banner .slider {
   position: absolute;
-  width: 200px;
+  width: 180px;
   height: 250px;
   top: 15%;
   left: calc(50% - 100px);
@@ -42,6 +42,7 @@ body {
 }
 
 .banner .slider .item {
+  cursor: pointer;
   clip-path: polygon(
     2% 16%,
     0 0,

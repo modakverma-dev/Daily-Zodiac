@@ -1,37 +1,102 @@
+const fetchHoroscopeData = async (sign) => {
+  if (!sign) throw new Error("No sign provided");
+
+  try {
+    const response = await fetch(
+      `http://sandipbgt.com/theastrologer/api/horoscope/${sign}/today`
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    const horoscope = data.horoscope;
+    return horoscope;
+  } catch (error) {
+    console.error(`Error fetching horoscope for ${sign}:`, error);
+    return "";
+  }
+};
 const list = [
   {
-    sign: "leo",
-    prediction:
-      "Your nature of getting out of the relation when all the excitements of a romance die down will only present you with mental trauma this time. So avoid hurting others and by which hurting yourself.The efforts you put into your ventures till now, will start attaining benefits. For the time being, you can just sit down and relax. Then you can start plucking the ripe fruits of your hard labour.Try to keep aside your proud, impatient and bombastic nature while dealing with your siblings as chances are there for minor clashes with your brothers or sisters.A sense of joy and cheerfulness will fill you. Through introspection and by exercising your mind on things, which are not mundane, you will rise above the stress and strain of routine existence. So, enjoy.Your ability to face matters confidently will make you able to deal with some harsh situations coolly. Try to keep a tight grip on your emotions towards others.You will find yourself aloof from your family members. The fault is more from your side. Think for a little while what, other than bringing money, you have done for your kids as a fatherWomen will have a favourable week, both at workplace and home. You will find yourself more appreciated and cared by others.As per signs, you will go through complex situations for a few days. You will find yourself restless and argumentative in whatever work you undertake. You will feel that you lack the power for analysing to reach an intelligent decision.Children will depend more on you for their problems. As a mother, you will be able to help them out of it with your practical and intelligent mind.Your ability to remain silent, humble and flexible when it is not necessary to air your views will bring more recognition for you among others. You can very well present your philosophical insights when it is in need.",
+    sign: "aries",
+    prediction: "",
+  },
+  {
+    sign: "taurus",
+    prediction: "",
   },
   {
     sign: "leo",
-    prediction:
-      "Your nature of getting out of the relation when all the excitements of a romance die down will only present you with mental trauma this time. So avoid hurting others and by which hurting yourself.The efforts you put into your ventures till now, will start attaining benefits. For the time being, you can just sit down and relax. Then you can start plucking the ripe fruits of your hard labour.Try to keep aside your proud, impatient and bombastic nature while dealing with your siblings as chances are there for minor clashes with your brothers or sisters.A sense of joy and cheerfulness will fill you. Through introspection and by exercising your mind on things, which are not mundane, you will rise above the stress and strain of routine existence. So, enjoy.Your ability to face matters confidently will make you able to deal with some harsh situations coolly. Try to keep a tight grip on your emotions towards others.You will find yourself aloof from your family members. The fault is more from your side. Think for a little while what, other than bringing money, you have done for your kids as a fatherWomen will have a favourable week, both at workplace and home. You will find yourself more appreciated and cared by others.As per signs, you will go through complex situations for a few days. You will find yourself restless and argumentative in whatever work you undertake. You will feel that you lack the power for analysing to reach an intelligent decision.Children will depend more on you for their problems. As a mother, you will be able to help them out of it with your practical and intelligent mind.Your ability to remain silent, humble and flexible when it is not necessary to air your views will bring more recognition for you among others. You can very well present your philosophical insights when it is in need.",
+    prediction: "",
   },
   {
-    sign: "leo",
-    prediction:
-      "Your nature of getting out of the relation when all the excitements of a romance die down will only present you with mental trauma this time. So avoid hurting others and by which hurting yourself.The efforts you put into your ventures till now, will start attaining benefits. For the time being, you can just sit down and relax. Then you can start plucking the ripe fruits of your hard labour.Try to keep aside your proud, impatient and bombastic nature while dealing with your siblings as chances are there for minor clashes with your brothers or sisters.A sense of joy and cheerfulness will fill you. Through introspection and by exercising your mind on things, which are not mundane, you will rise above the stress and strain of routine existence. So, enjoy.Your ability to face matters confidently will make you able to deal with some harsh situations coolly. Try to keep a tight grip on your emotions towards others.You will find yourself aloof from your family members. The fault is more from your side. Think for a little while what, other than bringing money, you have done for your kids as a fatherWomen will have a favourable week, both at workplace and home. You will find yourself more appreciated and cared by others.As per signs, you will go through complex situations for a few days. You will find yourself restless and argumentative in whatever work you undertake. You will feel that you lack the power for analysing to reach an intelligent decision.Children will depend more on you for their problems. As a mother, you will be able to help them out of it with your practical and intelligent mind.Your ability to remain silent, humble and flexible when it is not necessary to air your views will bring more recognition for you among others. You can very well present your philosophical insights when it is in need.",
+    sign: "virgo",
+    prediction: "",
   },
   {
-    sign: "leo",
-    prediction:
-      "Your nature of getting out of the relation when all the excitements of a romance die down will only present you with mental trauma this time. So avoid hurting others and by which hurting yourself.The efforts you put into your ventures till now, will start attaining benefits. For the time being, you can just sit down and relax. Then you can start plucking the ripe fruits of your hard labour.Try to keep aside your proud, impatient and bombastic nature while dealing with your siblings as chances are there for minor clashes with your brothers or sisters.A sense of joy and cheerfulness will fill you. Through introspection and by exercising your mind on things, which are not mundane, you will rise above the stress and strain of routine existence. So, enjoy.Your ability to face matters confidently will make you able to deal with some harsh situations coolly. Try to keep a tight grip on your emotions towards others.You will find yourself aloof from your family members. The fault is more from your side. Think for a little while what, other than bringing money, you have done for your kids as a fatherWomen will have a favourable week, both at workplace and home. You will find yourself more appreciated and cared by others.As per signs, you will go through complex situations for a few days. You will find yourself restless and argumentative in whatever work you undertake. You will feel that you lack the power for analysing to reach an intelligent decision.Children will depend more on you for their problems. As a mother, you will be able to help them out of it with your practical and intelligent mind.Your ability to remain silent, humble and flexible when it is not necessary to air your views will bring more recognition for you among others. You can very well present your philosophical insights when it is in need.",
+    sign: "cancer",
+    prediction: "",
+  },
+  {
+    sign: "libra",
+    prediction: "",
+  },
+  {
+    sign: "aquarius",
+    prediction: "",
+  },
+  {
+    sign: "scorpio",
+    prediction: "",
+  },
+  {
+    sign: "sagittarius",
+    prediction: "",
+  },
+  {
+    sign: "gemini",
+    prediction: "",
+  },
+  {
+    sign: "pisces",
+    prediction: "",
+  },
+  {
+    sign: "capricorn",
+    prediction: "",
   },
 ];
 
-const sliderElem = document.querySelector(".slider");
-sliderElem.style.setProperty("--quantity", list.length);
-for (let i = 0; i < list.length; i++) {
-  const itemELem = document.createElement("div");
-  itemELem.classList.add("item");
-  itemELem.style.setProperty("--position", i + 1);
-  const headingELem = document.createElement("h1");
-  const pELem = document.createElement("p");
-  pELem.innerText = list[i]?.prediction;
-  headingELem.innerText = list[i]?.sign;
-  itemELem.appendChild(headingELem);
-  itemELem.appendChild(pELem);
-  sliderElem.appendChild(itemELem);
-}
+const updateHoroscopeData = async () => {
+  try {
+    for (let i = 0; i < list.length; i++) {
+      const sign = list[i].sign.toLowerCase();
+      const prediction = await fetchHoroscopeData(sign);
+      list[i].prediction = prediction ? prediction : "";
+    }
+    updateSlider();
+  } catch (error) {
+    console.error("Error updating horoscope data:", error);
+  }
+};
+
+const updateSlider = () => {
+  const sliderElem = document.querySelector(".slider");
+  sliderElem.style.setProperty("--quantity", list.length);
+  sliderElem.innerHTML = ""; // Clear previous items
+
+  for (let i = 0; i < list.length; i++) {
+    const itemElem = document.createElement("div");
+    itemElem.classList.add("item");
+    itemElem.style.setProperty("--position", i + 1);
+    const headingElem = document.createElement("h1");
+    const pElem = document.createElement("p");
+    pElem.innerText = list[i]?.prediction;
+    headingElem.innerText = list[i]?.sign;
+    itemElem.appendChild(headingElem);
+    itemElem.appendChild(pElem);
+    sliderElem.appendChild(itemElem);
+  }
+};
+
+updateHoroscopeData();
