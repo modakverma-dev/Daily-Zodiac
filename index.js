@@ -23,50 +23,62 @@ const list = [
   {
     sign: "aries",
     prediction: "",
+    image: "./images/aries.png",
   },
   {
     sign: "taurus",
     prediction: "",
+    image: "./images/taurus.png",
   },
   {
     sign: "leo",
     prediction: "",
+    image: "./images/leo.png",
   },
   {
     sign: "virgo",
     prediction: "",
+    image: "./images/virgo.png",
   },
   {
     sign: "cancer",
     prediction: "",
+    image: "./images/cancer.png",
   },
   {
     sign: "libra",
     prediction: "",
+    image: "./images/libra.png",
   },
   {
     sign: "aquarius",
     prediction: "",
+    image: "./images/pisces.png",
   },
   {
     sign: "scorpio",
     prediction: "",
+    image: "./images/scorpion.png",
   },
   {
     sign: "sagittarius",
     prediction: "",
+    image: "./images/sagittarius.png",
   },
   {
     sign: "gemini",
     prediction: "",
+    image: "./images/gemini.png",
   },
   {
     sign: "pisces",
     prediction: "",
+    image: "./images/pisces.png",
   },
   {
     sign: "capricorn",
     prediction: "",
+    image: "./images/capricorn.png",
   },
 ];
 
@@ -90,6 +102,8 @@ const updateSlider = () => {
 
   for (let i = 0; i < list.length; i++) {
     const itemElem = document.createElement("div");
+    const imageElem = document.createElement("img");
+    imageElem.setAttribute("src", list[i]?.image);
     itemElem.classList.add("item");
     itemElem.style.setProperty("--position", i + 1);
     const headingElem = document.createElement("h1");
@@ -97,6 +111,7 @@ const updateSlider = () => {
     pElem.innerText = list[i]?.prediction;
     headingElem.innerText = list[i]?.sign;
     itemElem.appendChild(headingElem);
+    itemElem.appendChild(imageElem);
     itemElem.appendChild(pElem);
     sliderElem.appendChild(itemElem);
   }
