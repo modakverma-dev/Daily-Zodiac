@@ -119,11 +119,22 @@ body {
   color: transparent;
 }
 
-.author h2 {
+.author {
+  z-index: 20;
+}
+.author a {
   color: white;
+  cursor: pointer;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+.author a:hover {
+  transform: scale(1.1);
+  display: inline-block;
+  transition: transform 0.25s;
 }
 .author p {
-  color: rgba(255, 255, 255, 0123.545);
+  color: rgba(255, 255, 255, 0.638);
 }
 
 .banner .content .model {
