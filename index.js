@@ -80,18 +80,6 @@ const updateHoroscopeData = async () => {
   }
 };
 
-function handleHover(position) {
-  const deg = position * parseInt(360 / list.length);
-  const sliderElem = document.querySelector(".slider");
-  sliderElem.style.transform = `perspective(1000px) rotateY(${deg}deg)`;
-  sliderElem.style.animation = "none";
-  console.log(deg, "deg");
-}
-function handleMouseOut() {
-  const sliderElem = document.querySelector(".slider");
-  sliderElem.style.animation = " autoRun 25s linear infinite";
-}
-
 const updateSlider = () => {
   const sliderElem = document.querySelector(".slider");
   sliderElem.style.setProperty("--quantity", list.length);
@@ -108,9 +96,6 @@ const updateSlider = () => {
     itemElem.appendChild(headingElem);
     itemElem.appendChild(pElem);
     sliderElem.appendChild(itemElem);
-
-    itemElem.addEventListener("mouseenter", () => handleHover(i + 1));
-    itemElem.addEventListener("mouseleave", handleMouseOut);
   }
 };
 
