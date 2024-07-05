@@ -9,8 +9,11 @@ const fetchHoroscopeData = async (sign) => {
       throw new Error("Network response was not ok");
     }
     const data = await response.json();
+    let regex =
+      /\(c\) Kelli Fox, The Astrologer, http:\/\/new\.theastrologer\.com/g;
     const horoscope = data.horoscope;
-    return horoscope;
+    let result = horoscope.replace(regex, "");
+    return result;
   } catch (error) {
     console.error(`Error fetching horoscope for ${sign}:`, error);
     return "";
